@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+<xs:element name = 'pluginList'>
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name='plugin' type = 'pluginInfo' minOccurs = '1'  maxOccurs = '10'/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:complexType name = 'pluginInfo'>
+	<xs:sequence>
+		<xs:element name = 'name' type = 'xs:string'/>
+		<xs:element name = 'version' type = 'xs:string'/>
+		<xs:element name = 'brief' type = 'xs:string'/>
+		<xs:element name = 'author' type = 'xs:string'/>
+		<xs:element name = 'UIClass' type = 'xs:string'/>
+		<xs:element name = 'backgroundColor' type = 'backgroundColor'/>
+	</xs:sequence>
+</xs:complexType>
+
+
+<xs:simpleType name = 'backgroundColor'>
+	<xs:restriction base = 'xs:string'>
+		<xs:enumeration value = 'black'/>
+		<xs:enumeration value = 'white'/>
+	</xs:restriction>
+</xs:simpleType>
+
+
+</xs:schema> 
